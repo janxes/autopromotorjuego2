@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --app-font-size: 16px;
+  }
+
+  html {
+    font-size: var(--app-font-size);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* High focus visibility for accessibility */
+  :focus-visible {
+    outline: 3px solid #059669 !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* High Contrast mode */
+body.high-contrast {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.high-contrast .bg-slate-900,
+body.high-contrast .bg-slate-950 {
+  background-color: #000000 !important;
+  border-color: #ffffff !important;
+}
+
+body.high-contrast .border-slate-200,
+body.high-contrast .border-slate-300 {
+  border-color: #000000 !important;
+}
+
+body.high-contrast button {
+  border-width: 2px !important;
+}
